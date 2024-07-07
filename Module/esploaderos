@@ -141,7 +141,7 @@ if _G.DefaultSettings == true then
     _G.TextColor = Color3.fromRGB(40, 90, 255)
     _G.TextSize = 14
     _G.Center = true
-    _G.Outline = false
+    _G.Outline = true
     _G.OutlineColor = Color3.fromRGB(0, 0, 0)
     _G.DisableKey = Enum.KeyCode.Q
     _G.TextTransparency = 0.75
@@ -161,7 +161,7 @@ UserInputService.InputBegan:Connect(function(Input)
         
         if _G.SendNotifications == true then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Exunys Developer";
+                Title = "Etronix";
                 Text = "The ESP's visibility is now set to "..tostring(_G.ESPVisible)..".";
                 Duration = 5;
             })
@@ -176,7 +176,7 @@ end)
 if Success and not Errored then
     if _G.SendNotifications == true then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "Exunys Developer";
+            Title = "Etronix";
             Text = "ESP script has successfully loaded.";
             Duration = 5;
         })
@@ -184,12 +184,12 @@ if Success and not Errored then
 elseif Errored and not Success then
     if _G.SendNotifications == true then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "Exunys Developer";
+            Title = "Etronix";
             Text = "ESP script has errored while loading, please check the developer console! (F9)";
             Duration = 5;
         })
     end
-    TestService:Message("The ESP script has errored, please notify Exunys with the following information :")
+    TestService:Message("The ESP script has errored, please notify uerd with the following information :")
     warn(Errored)
     print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
 end
